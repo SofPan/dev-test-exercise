@@ -36,7 +36,7 @@ const Form = () => {
 		/*
             Conditionally check if password is valid (min 6 characters)
         */
-        password.length > 6 ? setPasswordIsValid(true) : setPasswordIsValid(false);
+        password.length + 1 >= 6 ? setPasswordIsValid(true) : setPasswordIsValid(false);
 	};
 
 	const formSubmitHandler = (e) => {
