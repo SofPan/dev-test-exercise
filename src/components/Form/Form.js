@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import styles from './Form.module.css';
+
 const Form = () => {
 	/*
         Initialize state for form inputs
@@ -44,6 +46,7 @@ const Form = () => {
 					type='email'
 					value={email}
 					onChange={emailChangeHandler}
+                    className={!emailIsValid ? styles.error : undefined}
 				/>
 			</div>
 			<div>
@@ -52,6 +55,7 @@ const Form = () => {
 					type='password'
 					value={password}
 					onChange={passwordChangeHandler}
+                    className={!passwordIsValid ? styles.error : undefined}
 				/>
 			</div>
 			<div>
