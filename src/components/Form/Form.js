@@ -7,6 +7,14 @@ const Form = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
+    /*
+        State management for valid/invalid form inputs.
+            Initial state is false as there is no input.
+    */
+    const [emailIsValid, setEmailIsValid] = useState(false);
+    const [passwordIsValid, setPasswordIsValid] = useState(false);
+
+
 	const emailChangeHandler = (e) => {
 		/*
             Set email to user input
