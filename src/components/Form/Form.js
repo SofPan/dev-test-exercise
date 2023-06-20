@@ -59,29 +59,31 @@ const Form = () => {
 	};
 
 	return (
-		<form onSubmit={formSubmitHandler}>
-			<div>
-				<label>Email</label>
-				<input
-					type='email'
-					value={email}
-					onChange={emailChangeHandler}
-					className={!emailIsValid ? styles.error : undefined}
-				/>
-			</div>
-			<div>
-				<label>Password</label>
-				<input
-					type='password'
-					value={password}
-					onChange={passwordChangeHandler}
-					className={!passwordIsValid ? styles.error : undefined}
-				/>
-			</div>
-			<div>
-				<button>Login</button>
-			</div>
-		</form>
+        <div className={styles.formContainer}>
+            <form className={styles.form} onSubmit={formSubmitHandler}>
+                <div className={styles.formBlock}>
+                    <label>Email</label>
+                    <input
+                        type='email'
+                        value={email}
+                        onChange={emailChangeHandler}
+                        className={!emailIsValid ? styles.error : undefined}
+                    />
+                </div>
+                <div className={styles.formBlock}>
+                    <label>Password</label>
+                    <input
+                        type='password'
+                        value={password}
+                        onChange={passwordChangeHandler}
+                        className={!passwordIsValid ? styles.error : undefined}
+                    />
+                </div>
+                <div className={styles.formBlock}>
+                    <button className={styles.button}>Login</button>
+                </div>
+            </form>
+        </div>
 	);
 };
 
