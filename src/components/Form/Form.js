@@ -8,11 +8,18 @@ const Form = () => {
     const [password, setPassword] = useState("");
 
 
+    const emailChangeHandler = (e) => {
+        /*
+            Set email to user input
+        */ 
+        setEmail(e.target.value);
+    }
+
     return(
         <form>
             <div>
                 <label>Email</label>
-                <input type="email" value={email} />
+                <input type="email" value={email} onChange={emailChangeHandler} />
             </div>
             <div>
                 <label>Password</label>
