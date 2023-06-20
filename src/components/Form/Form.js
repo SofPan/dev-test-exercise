@@ -1,14 +1,22 @@
+import { useState } from "react";
 
 const Form = () => {
+    /*
+        Initialize state for form inputs
+    */ 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
     return(
         <form>
             <div>
                 <label>Email</label>
-                <input type="email" value="email@email.com" />
+                <input type="email" value={email} />
             </div>
             <div>
                 <label>Password</label>
-                <input type="password" value="" placeholder="password" />
+                <input type="password" value={password} />
             </div>
             <div>
                 <button>Login</button>
