@@ -21,8 +21,15 @@ const Form = () => {
 		setPassword(e.target.value);
 	};
 
+    const formSubmitHandler = (e) => {
+        e.preventDefault();
+
+        setEmail("");
+        setPassword("");
+    }
+
 	return (
-		<form>
+		<form onSubmit={formSubmitHandler}>
 			<div>
 				<label>Email</label>
 				<input
