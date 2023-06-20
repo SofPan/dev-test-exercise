@@ -41,9 +41,15 @@ const Form = () => {
 
 	const formSubmitHandler = (e) => {
 		e.preventDefault();
-
-		setEmail("");
-		setPassword("");
+        if (emailIsValid && passwordIsValid){
+            alert('Thank you for logging in!');
+            setEmail("");
+            setEmailIsValid(false);
+            setPassword("");
+            setPasswordIsValid(false);
+        } else {
+            alert('Email or Password is invalid.')
+        }
 	};
 
 	return (
