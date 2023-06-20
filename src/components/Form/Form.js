@@ -41,8 +41,14 @@ const Form = () => {
 
 	const formSubmitHandler = (e) => {
 		e.preventDefault();
+        /*
+            Conditionally check if the form inputs are valid on submit
+        */ 
         if (emailIsValid && passwordIsValid){
             alert('Thank you for logging in!');
+            /*
+                On Successful submit, reset to default state
+            */ 
             setEmail("");
             setEmailIsValid(false);
             setPassword("");
